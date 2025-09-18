@@ -1,0 +1,17 @@
+# CRMCE--CustomPlugins
+
+## Contents
+- DataverseReader.cs : Reads users/customers from Dataverse
+- DataverseWriter.cs : Writes/updates users/customers to Dataverse
+- DTOs/ : Contains UserDTO, CustomerDTO, TeamUserDTO
+- Plugins/ : CustomerDeletionPlugin.cs
+
+## Plugin Registration
+- CustomerDeletionPlugin
+  - Entity: account
+  - Message: Delete
+  - Pipeline stage: Pre-Operation / Post-Operation (depends on logic)
+- CustomerDeletionPlugin
+  - Entity: team
+  - Message: Associate / Disassociate
+  - Pipeline stage: Post-Operation
